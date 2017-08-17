@@ -61,9 +61,9 @@ NOTE: Trocar o <usuario> pelo nome do seu usuário
    
 3. Abra o Appium e inicie o servidor do mesmo.
 
-3. Executando todos os cenários da feature "Minhas conversões": 
+4. Executando todos os cenários da feature "Minhas conversões": 
    cucumber
    
-4. Executando features com report: 
+5. Executando features com report: 
    cucumbers -p report
 ```
