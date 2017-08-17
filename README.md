@@ -65,5 +65,5 @@ NOTE: Trocar o <usuario> pelo nome do seu usuário
    cucumber
    
 5. Executando features com report: 
-   cucumbers -p report
+   cucumber -p report
 ```
