@@ -7,18 +7,15 @@ def caps
         caps: {
             deviceName: "Nexus",
             platformName: "Android",
-            app: (File.join(File.dirname(__FILE__), "PreciseUnitConversion.apk")),
+            app: (File.join(File.dirname(__FILE__), "PreciseUnitConversion.apk")), #Função que pega o arquivo que está na mesma pasta que o (env)
             appPackage: "com.ba.universalconverter", #uiautomatorviewer& || Appium logs
             appActivity: "MainConverterActivity", #Appium logs
-            newCommandTimeout: "3600",
-            #noReset: true,
-            #fullReset: true,
-        appium_lib: { wait: 20,
-                      debug: false
-                    }
+            newCommandTimeout: "3600"
+            #noReset: true
+            #fullReset: true
         }
     }
 end
 
-Appium::Driver.new(caps)
+Appium::Driver.new(caps, true)
 Appium.promote_appium_methods Object
