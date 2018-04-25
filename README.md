@@ -6,7 +6,7 @@ Test Automation with Appium framework
 
 ```ruby
 a. Instalar o Homebrew:
-   ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”
+   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"r
    
 b. Instalar JDK para o Mac:
    http://www.oracle.com/technetwork/java/javase/downloads/index.html
