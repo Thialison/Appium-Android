@@ -2,7 +2,7 @@
 Test Automation with Appium framework
 
 
-### Instalando Ambiente no MAC
+### Instalando Ambiente no MaC
 
 ```ruby
 a. Instalar o Homebrew:
@@ -25,7 +25,7 @@ e. Instalar Appium Desktop
    http://appium.io/ => Clique em download e baixe a versão mais recente para o seu SO
 ```
 
-### Váriaveis de Ambiente JAVA
+### Variáveis de Ambiente JAVA
 ```ruby
 Abrir arquivo de configuração
 open ~/.bash_profile
@@ -35,7 +35,7 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=$JAVA_HOME/bin:$PATH 
 ```
 
-### Váriaveis de Ambiente do Android
+### Variáveis de Ambiente do Android
 
 ```ruby
 Abrir arquivo de configuração
