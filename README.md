@@ -2,7 +2,7 @@
 Test Automation with Appium framework
 
 
-### Instalando Ambiente no MaC
+### Instalando Ambiente no Mac
 
 ```ruby
 a. Instalar o Homebrew:
