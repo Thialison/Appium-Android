@@ -23,14 +23,22 @@ d. Instalar Android Studio
    
 e. Instalar Appium Desktop
    http://appium.io/ => Clique em download e baixe a versão mais recente para o seu SO
-
 ```
 
-### Instalando Gems do Ruby
+### Váriaveis de Ambiente JAVA
+```ruby
+Abrir arquivo de configuração
+open ~/.bash_profile
+
+Preencher com:
+export JAVA_HOME=$(/usr/libexec/java_home)
+export PATH=$JAVA_HOME/bin:$PATH 
+```
+
+### Instalando Gerenciador de gems do Ruby
 
 ```ruby
 gem install bundler
-gem install appium_lib
 ```
 
 ### Váriaveis de Ambiente do Android
@@ -39,6 +47,7 @@ gem install appium_lib
 Abrir arquivo de configuração
 open ~/.bash_profile
 
+Preencher com:
 export ANDROID_HOME=/Users/<usuario>/Library/Android/sdk
 export PATH=$ANDROID_HOME/tools/bin:$PATH
 export PATH=$ANDROID_HOME/tools:$PATH
@@ -49,21 +58,23 @@ export PATH=$ANDROID_HOME/emulator/:$PATH
 NOTE: Trocar o <usuario> pelo nome do seu usuário
 ```
 
-
 ### Executando o Projeto :dart:
 
 ```ruby
 1. Faça um clone do projeto:
    git clone https://github.com/Thialison/Appium-Android.git
 
-2. Emulando android virtual device: 
+2. Acesse a pasta pelo terminal e execute o comando:
+   bundle
+
+3. Emulando android virtual device: 
    emulator @"<Nome do seu emulator>"&
    
-3. Abra o Appium e inicie o servidor do mesmo.
+4. Abra o Appium e inicie o servidor do mesmo.
 
-4. Executando todos os cenários da feature "Minhas conversões": 
+5. Executando todos os cenários da feature "Minhas conversões": 
    cucumber
    
-5. Executando features com report: 
+6. Executando features com report: 
    cucumber -p report
 ```
