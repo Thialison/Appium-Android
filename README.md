@@ -35,12 +35,6 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export PATH=$JAVA_HOME/bin:$PATH 
 ```
 
-### Instalando Gerenciador de gems do Ruby
-
-```ruby
-gem install bundler
-```
-
 ### Váriaveis de Ambiente do Android
 
 ```ruby
@@ -56,6 +50,12 @@ export PATH=$ANDROID_HOME/platform-tools/adb:$PATH
 export PATH=$ANDROID_HOME/emulator/:$PATH
 
 NOTE: Trocar o <usuario> pelo nome do seu usuário
+```
+
+### Instalando Gerenciador de gems do Ruby
+
+```ruby
+gem install bundler
 ```
 
 ### Executando o Projeto :dart:
