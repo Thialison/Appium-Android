@@ -2,8 +2,7 @@ class Home < Appium::Driver
 
 # ================================= SCREEN ======================================    
     def initialize
-        @home_screen = "target_value_placeholder"
-        @menu_icon = "Open navigation drawer"
+        @home_screen = 'action_bar_container'
         @menu_my_conversion = "My conversions"
         @left_menu = "drawerItem"
     end
@@ -11,16 +10,15 @@ class Home < Appium::Driver
 # ================================ METHODS ======================================
     
     def tela_principal_aberta?
-        id(@home_screen)
+        id(@home_screen).displayed?
     end
     
     def tocar_icone_menu
-        id(@menu_icon).click
+        find_element(class: 'android.widget.ImageButton').click
     end
 
     def tocar_minhas_conversoes
-        id(@left_menu)
-        text_exact(@menu_my_conversion).click
+        find_elements(class: 'android.widget.TextView').select{|el| el.text.eql?('My conversions')}.first.click
     end
 
 end

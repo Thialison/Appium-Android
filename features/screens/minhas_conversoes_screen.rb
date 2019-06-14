@@ -1,5 +1,5 @@
 class Conversoes < Appium::Driver
-
+    include RSpec::Matchers
 
 # ================================= SCREEN ======================================    
     def initialize
@@ -16,18 +16,18 @@ class Conversoes < Appium::Driver
 # ================================ METHODS ======================================
 
     def criar_nova_conversao
-        id(@new_conversion).click
-        id(@name_conversion).send_keys @conversion_name
-        id(@btn_new_unit).click
-        id(@name_unit).send_keys "Katsu"
-        id(@name_value_unit).send_keys "999"
-        id(@btn_confirm_unit).click
-        id(@btn_confirm_category).click
+        id('btn_new_custom_conversion').click
+        find_element(id: 'edit_custom_conversion_category_name').send_keys 'TestUnit'
+        find_element(id: 'btn_new_custom_unit').click
+        find_element(id: 'edit_custom_conversion_unit_dtls_name').send_keys 'Katsu'
+        find_element(id: 'edit_custom_conversion_unit_dtls_value').send_keys '490'
+        find_element(id: 'btn_unit_dtls_ok').click
+        find_element(id: 'action_confirm_custom_category').click
     end
 
     def valida_nova_conversao
-        result = id("custom_category_item_name").text
-        fail 'Conversão não foi criada' unless result == @conversion_name
+        result = find_element(id: 'custom_category_item_name').text
+        expect(result).to eq('TestUnit')
     end
 
     def visualiza_minhas_conversoes?
