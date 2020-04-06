@@ -3,8 +3,8 @@ class Home < Appium::Driver
 # ================================= SCREEN ======================================    
     def initialize
         @home_screen = 'action_bar_container'
-        @menu_my_conversion = "My conversions"
-        @left_menu = "drawerItem"
+        @menu_my_conversion = 'My conversions'
+        @left_menu = 'drawerItem'
     end
     
 # ================================ METHODS ======================================
@@ -18,7 +18,7 @@ class Home < Appium::Driver
     end
 
     def tocar_minhas_conversoes
-        find_elements(class: 'android.widget.TextView').select{|el| el.text.eql?('My conversions')}.first.click
+        text(@menu_my_conversion).click if text('Unit Converter').displayed?
     end
 
 end
